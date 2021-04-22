@@ -1,0 +1,17 @@
+{% extends 'base.html' %}
+
+{% block body %}
+
+<!-- 入力フォームを作成し、タスクの情報を送信する -->
+<div class="form">
+    <form action="/" method="POST">
+        <label for="title">タイトル</label>
+        <input type="text" name="タイトル">
+        <label for="detail">詳細</label>
+        <input type="text" name="詳細">
+        <label for="due">日付</label>
+        <input type="date" name="日付" required>
+        <input type="submit" value="作成">
+    </form>
+</div>
+{% endblock %}
