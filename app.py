@@ -44,9 +44,8 @@ def create():
 if __name__ == "__main__":
     app.run(debug=True)
 
-<<<<<<< HEAD
 
-# git不具合確認中
-=======
-# test commit
->>>>>>> ff39dabceeb8f3c49334fffcb347fae02d7796ad
+
+
+
+    # 不具合確認中
