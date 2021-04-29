@@ -22,14 +22,14 @@ class Post(db.Model):
 @app.route('/', methods=['GET', 'POST'])
 def index():
     if request.method == 'GET':
-        posts = POST.query.all()
-        return render_template('index.html')
-    
+        posts = Post.query.all()
+        return render_template('index.html', posts=posts)
+
     else:
         title = request.form.get('title')
         detail = request.form.get('detail')
         due = request.form.get('due')
-
+        
         due = datetime.strptime(due, '%Y-%m-%d')
         new_post = Post(title=title, detail=detail, due=due)
 
