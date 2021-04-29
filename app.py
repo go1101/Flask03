@@ -47,3 +47,6 @@ def create():
 if __name__ == "__main__":
     app.run(debug=True)
 
+
+
+# 最終行を変更しました
