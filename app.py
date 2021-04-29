@@ -3,6 +3,8 @@ from flask_sqlalchemy import SQLAlchemy
 from datetime import datetime
 
 
+# ブランチを作成
+
 app = Flask(__name__)
 
 # データベースをURI設定
