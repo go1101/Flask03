@@ -24,7 +24,6 @@ def index():
     if request.method == 'GET':
         posts = Post.query.all()
         return render_template('index.html', posts=posts)
-
     else:
         title = request.form.get('title')
         detail = request.form.get('detail')
@@ -41,6 +40,14 @@ def index():
 @app.route('/create')
 def create():
     return render_template('create.html')
+
+
+@app.route('/detail/<int:id>')
+def read(id):
+    post = Post.query.get(id)
+    return render_template('detail.html', post=post)
+
+
 
 
 
