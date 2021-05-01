@@ -48,6 +48,18 @@ def read(id):
     return render_template('detail.html', post=post)
 
 
+@app.route('/update/<int:id>', methods=['GET', 'POST'])
+def update(id):
+    post = Post.query.get(id)
+    if request.method == 'GET':
+        return render_template('update.html', post=post)
+
+
+
+    return render_template('detail.html', post=post)
+
+
+
 @app.route('/delete/<int:id>')
 def delete(id):
     post = Post.query.get(id)
